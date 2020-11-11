@@ -23,6 +23,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::get('/s3', function () {
-    $s3 = Storage::disk('s3')->allFiles('profile-photos/');
-    return $s3;
+    // return Storage::disk('s3')->download('profile-photos/Donkey_Kong_60.png');
+    // $s3 = Storage::disk('s3')->url('profile-photos/Donkey_Kong_60.png');
+    // return $s3;
+    // return '<img src=' . $s3 . '></img>';
 });

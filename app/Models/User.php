@@ -58,4 +58,15 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Get the disk that profile photos should be stored on.
+     *
+     * @return string
+     */
+    protected function profilePhotoDisk()
+    {
+        return 's3';
+    }
+
 }
